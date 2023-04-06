@@ -1,0 +1,75 @@
+
+.button{
+display: inline-block;
+border-right: 1px dotted black;
+color: gray;
+background:#eceff1;
+width: 14%;
+font-size: 18px;
+padding: 10px;
+
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -ms-transition: all 1s;
+}
+
+.button:hover{
+	color: orange;
+	background-color: gray;
+	cursor:pointer;
+}
+
+
+.filtr{
+border: 0.1px dotted gray;
+color: gray;
+background:white;
+margin: 20px 20px 0px 20px;
+padding: 10px;
+}
+
+
+#top-bar img{
+	 display: inline-block;
+ 	margin: 10px;
+	 height: 40px;
+
+}
+#top-bar form{
+	display: inline-block;
+	margin:10px;
+	vertical-align: top;<!--why i need to use it-->
+}
+.text-input{
+	padding: 0px 10px;
+	height: 40px;
+	width: 400px;
+	/*margin: 10px 0px 10px 10px;*/
+}
+
+#submit{
+	display:inline-block;
+	height: 40px;
+	padding: 0px 10px;
+	background: orange;
+	width:200px;
+
+	/*margin: 10px 10px 10px 0px;*/
+	
+		cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

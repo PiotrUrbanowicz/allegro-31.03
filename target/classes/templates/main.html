@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="common.css" type="text/css"/>
+    <link rel="stylesheet" href="button.css" type="text/css"/>
+    <link rel="stylesheet" href="item.css" type="text/css"/>
+    <link rel="stylesheet" href="sidebar.css" type="text/css"/>
+</head>
+<body>
+
+<div id="contener">
+    <div id="bar-contener">
+        <div id="top-bar">
+            <img src="img/allegro.png">
+            <form>
+                <input type="text" placeholder="szukaj" class="text-input">
+                <input type="submit" value="szukaj" id="submit">
+            </form>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="menu-bar">
+
+            <div class="button">Strona Główna</div><!--
+		-->
+            <div class="button">Koszyk</div><!--
+		-->
+            <div class="button">Zamówienia</div><!--
+		-->
+            <div class="button">Dodaj Item</div><!--
+		-->
+            <div class="button">Kontakt</div><!--
+		-->
+            <div class="button">Login</div>
+
+        </div>
+    </div>
+
+    <div id="inside-contener">
+        <div id="sidebar">
+            <h3 class="filtr">Filtry</h3>
+
+            <div class="filtr">
+                Stan
+                <div style="float:right"><i class="arrow down"></i></div>
+            </div>
+            <div class="filtr">
+                <form>
+                    <input type="checkbox" id="stanNew"/>
+                    <label>Nowe</label><br>
+                    <input type="checkbox" id="stanUsed"/>
+                    <label>Używane</label><br>
+                </form>
+            </div>
+
+            <div class="filtr">
+                Marka
+                <div style="float:right"><i class="arrow down"></i></div>
+            </div>
+            <div class="filtr">
+                Cena
+                <div style="float:right"><i class="arrow down"></i></div>
+            </div>
+            <div class="filtr" style="background:orange;">Filtruj</div>
+        </div>
+        <div id="content">
+
+            <div class="item">
+                <div style="float: left;">
+                    <a href="https://www.w3schools.com"><img src="img/1.jpg"></a>
+                </div>
+                <div style="float: left;">
+                    <div class="name">ładowarka typ USB C + kabel</div>
+                    <div class="marka">Happet</div>
+                    <div class="price">Cena: 20.00</div>
+                    <div style="clear:both;"></div>
+                    <div class="quantity">pozostało: 8</div>
+                    <a href="" class="edit">edytuj</a>
+                    <a href="" class="buy">dodaj do koszyka</a>
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div style="float: left;">
+                    <a href="https://www.w3schools.com"><img src="img/2.jpg"></a>
+                </div>
+                <div style="float: left;">
+                    <div class="name">ładowarka typ USB C + kabel</div>
+                    <div class="marka">Happet</div>
+                    <div class="price">Cena: 20.00</div>
+                    <div style="clear:both;"></div>
+                    <div class="quantity">pozostało: 8</div>
+                    <a href="" class="edit">edytuj</a>
+                    <a href="" class="buy">dodaj do koszyka</a>
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</div>
+
+
+</body>
+</html>

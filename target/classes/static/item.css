@@ -1,0 +1,36 @@
+.item{
+	background-color: white;
+	height:15%;
+	width:93%;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: left;
+    padding: 10px;
+    color: black;
+}
+.item img{
+	float: left;
+	width: 100px;
+	height:100px;
+	margin-right: 10px;
+}
+.item:hover{
+	background-color: #eceff1;
+	cursor:pointer;
+}
+
+.name{
+	font-size:32px;
+}
+
+.marka, .price, .quantity, .edit, .buy{
+	float: left;
+	font-size:22px;
+	padding-right: 20px;
+}
+
+.sideBarTitle{
+	font-size: 30px;
+	color:gray;
+	margin-bottom:30px;
+}
