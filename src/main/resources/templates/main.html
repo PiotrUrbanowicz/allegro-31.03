@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="common.css" type="text/css"/>
-    <link rel="stylesheet" href="button.css" type="text/css"/>
-    <link rel="stylesheet" href="item.css" type="text/css"/>
-    <link rel="stylesheet" href="sidebar.css" type="text/css"/>
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="css/button.css" type="text/css"/>
+    <link rel="stylesheet" href="css/item.css" type="text/css"/>
+    <link rel="stylesheet" href="css/sidebar.css" type="text/css"/>
 </head>
 <body>
 
-<div id="contener">
-    <div id="bar-contener">
+<div id="container">
+    <div id="bar-container">
         <div id="top-bar">
-            <img src="img/allegro.png">
+            <img src="img/allegro.png" class="dom">
             <form>
                 <input type="text" placeholder="szukaj" class="text-input">
                 <input type="submit" value="szukaj" id="submit">
@@ -20,19 +20,12 @@
             <div style="clear:both;"></div>
         </div>
         <div id="menu-bar">
-
-            <div class="button">Strona Główna</div><!--
-		-->
-            <div class="button">Koszyk</div><!--
-		-->
-            <div class="button">Zamówienia</div><!--
-		-->
-            <div class="button">Dodaj Item</div><!--
-		-->
-            <div class="button">Kontakt</div><!--
-		-->
-            <div class="button">Login</div>
-
+           <a  href="/main" class="button">Strona Główna</a><!--
+		--><a  href="/cart" class="button">Koszyk</a><!--
+		--><a  href="/orders" class="button">Zamówienia</a><!--
+		--><a  href="/add" class="button">Dodaj Item</a><!--
+		--><a  href="/contact" class="button">Kontakt</a><!--
+		--><a href="/login" class="button">Login</a>
         </div>
     </div>
 

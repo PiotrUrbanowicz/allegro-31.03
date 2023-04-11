@@ -4,14 +4,14 @@ body{
 	margin:0px;
 }
 
-#contener{
+#container{
 	/*margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 	width: 1000px;
 	height: 1000px;*/
 }
-#bar-contener{
+#bar-container{
 	background: white;
 	border-bottom: 1px dotted gray;
 	margin-bottom: 40px;
@@ -59,8 +59,13 @@ body{
 }
 
 #footer{
-
 	background: red;
 	width: 79%;
 border: 2px solid gray;
+}
+
+.img {
+border: 5px solid orange;
+height: 60px;
+width: 100px;
 }

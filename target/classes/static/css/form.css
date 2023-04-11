@@ -1,0 +1,27 @@
+#form {
+    text-align: center;
+}
+
+#form input {
+    display: block;
+    margin: 10px auto;
+}
+
+#custom-button {
+  padding: 10px;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#custom-button:hover {
+  background-color: green;
+}
+
+#custom-text {
+  margin-left: 10px;
+  font-family: sans-serif;
+  color: black;
+}

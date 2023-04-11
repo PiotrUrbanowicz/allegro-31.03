@@ -9,9 +9,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class CommonController {
 
 
-    @RequestMapping(path = "/main", method = RequestMethod.GET)
+    @RequestMapping(path = "/", method = RequestMethod.GET)
     public String main() {
         return "main";
     }
+
+    @RequestMapping(path = "/login", method = RequestMethod.GET)
+    public String login() {
+        return "login-form";
+    }
+
 
 }
