@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <link rel="stylesheet" href="css/main.css" type="text/css"/>
     <link rel="stylesheet" href="css/button.css" type="text/css"/>
@@ -19,17 +18,10 @@
             </form>
             <div style="clear:both;"></div>
         </div>
-        <div id="menu-bar">
-           <a  href="/main" class="button">Strona Główna</a><!--
-		--><a  href="/cart" class="button">Koszyk</a><!--
-		--><a  href="/orders" class="button">Zamówienia</a><!--
-		--><a  href="/add" class="button">Dodaj Item</a><!--
-		--><a  href="/contact" class="button">Kontakt</a><!--
-		--><a href="/login" class="button">Login</a>
-        </div>
+        <div th:replace="~{fragments.html::main}"></div>
     </div>
 
-    <div id="inside-contener">
+    <div id="inside-container">
         <div id="sidebar">
             <h3 class="filtr">Filtry</h3>
 
@@ -91,6 +83,16 @@
             </div>
 
         </div>
+
+
+
+
+
+
+
+
+
+
 
     </div>
 

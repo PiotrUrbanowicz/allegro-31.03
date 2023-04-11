@@ -14,10 +14,19 @@ public class CommonController {
         return "main";
     }
 
+    @RequestMapping(path = "/main", method = RequestMethod.GET)
+    public String main2() {
+        return "redirect:/";
+    }
     @RequestMapping(path = "/login", method = RequestMethod.GET)
     public String login() {
         return "login-form";
     }
 
+
+    @RequestMapping(path = "/contact", method = RequestMethod.GET)
+    public String contact() {
+        return "contact";
+    }
 
 }

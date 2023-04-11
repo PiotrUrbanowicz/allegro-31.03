@@ -1,5 +1,35 @@
+body{
+	background: #eceff1;
+	margin:0px;
+}
+
 #container{
-margin-left:auto;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.img {
+height: 65px;
+}
 
 
+#bar-container{
+	background: white;
+	border-bottom: 1px dotted gray;
+	margin-bottom: 40px;
+}
+
+
+#top-bar{
+}
+
+#menu-bar{
+}
+
+
+#inside-container{
+	margin-left: auto;
+	margin-right: auto;
+	height:600px;
 }
