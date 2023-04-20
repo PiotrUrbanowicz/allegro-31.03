@@ -10,7 +10,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Item {
+
+public class Item implements Saveable {
     int id;
     String name;
     String brand;

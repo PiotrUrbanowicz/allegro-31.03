@@ -12,7 +12,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Order {
+public class Order implements Saveable {
     int id;
     int userId;
     List<OrderPosition> orderPositon = new ArrayList<>();

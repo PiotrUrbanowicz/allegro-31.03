@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class OrderPosition {
+public class OrderPosition implements Saveable {
     int id;
     int itemId;
     int quantity;
