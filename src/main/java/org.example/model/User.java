@@ -26,7 +26,6 @@ public class User {
 
     public User() {
     }
-
     public int getId() {
         return id;
     }
@@ -92,51 +91,4 @@ public class User {
                 '}';
     }
 
-    public static class UserBuilder {
-        User user = new User();
-
-        public UserBuilder id(int id) {
-            this.user.setId(id);
-            return this;
-        }
-
-        public UserBuilder name(String name) {
-            this.user.setName(name);
-            return this;
-        }
-
-        public UserBuilder surname(String surname) {
-            this.user.setSurname(surname);
-            return this;
-        }
-
-        public UserBuilder login(String login) {
-            this.user.setLogin(login);
-            return this;
-        }
-
-        public UserBuilder password(String password) {
-            this.user.setPassword(password);
-            return this;
-        }
-
-        public UserBuilder role(Role role) {
-            this.user.setRole(role);
-            return this;
-        }
-
-        public User build() {
-            return this.user;
-        }
-
-        public UserBuilder clone(User user) {
-            id(user.getId())
-                    .name(user.getName())
-                    .surname(user.getSurname())
-                    .login(user.getLogin())
-                    .password(user.getPassword())
-                    .role(user.getRole());
-            return this;
-        }
-    }
 }

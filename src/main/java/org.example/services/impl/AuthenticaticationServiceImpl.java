@@ -16,7 +16,7 @@ public class AuthenticaticationServiceImpl implements IAuthenticationService {
 
     @Override
     public boolean authenticationUser(String login,String password) {
-        Optional<User> user=userDAO.getUserById(1);
+        Optional<User> user=userDAO.getUserByLogin(login);
         System.out.println(user.isPresent());
 
         if(user.isPresent() && user.get().getPassword().equals(password)){

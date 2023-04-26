@@ -42,8 +42,15 @@ public class UserDAOImpl implements IUserDAO {
         Session session = this.sessionFactory.openSession();
         session.beginTransaction();
         System.out.println(user);
-        session.persist(user);
-        session.getTransaction().commit();
-        session.close();
+        try {
+            session.persist(user);
+            session.getTransaction().commit();
+            session.close();
+        }catch (Exception e){
+            System.out.println(e);
+            System.out.println();
+            System.out.println(e.getMessage());
+        }
+
     }
 }
