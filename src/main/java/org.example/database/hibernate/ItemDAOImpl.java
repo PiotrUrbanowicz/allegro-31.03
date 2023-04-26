@@ -3,16 +3,18 @@ package org.example.database.hibernate;
 import org.example.Exceptions.UserLoginExistException;
 import org.example.database.IItemDAO;
 import org.example.model.Item;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
+@Repository
+public class ItemDAOImpl implements IItemDAO {
 
-public class ItemDAOImpl extends EntityManager implements IItemDAO {
-
-    public ItemDAOImpl(SessionFactory sessionFactory) {
-        super(sessionFactory);
-    }
+    @Autowired
+    SessionFactory sessionFactory;
 
     @Override
     public List<Item> getItems() {
@@ -31,15 +33,20 @@ public class ItemDAOImpl extends EntityManager implements IItemDAO {
 
     @Override
     public void persistItem(Item item) {
+        Session session=sessionFactory.openSession();
         try {
-            super.persist(item);
-        } catch (UserLoginExistException e) {
-            System.out.println("błąd w persistItem");
+            session.beginTransaction();
+            session.persist(item);
+            session.getTransaction().commit();
+        }catch (Exception e){
+            session.getTransaction().rollback();
+        }finally{
+            session.close();
         }
-    }
+        }
 
     @Override
     public void updateItem(Item item) {
-        super.update(item);
+
     }
 }

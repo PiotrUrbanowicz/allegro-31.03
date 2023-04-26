@@ -19,14 +19,16 @@
 	</div>
   <div id="inside-container">
   
-<form id="form">
-<input type="text" placeholder="login" class="text-input">
-<input type="password" placeholder="password" class="text-input">
-<input type="password" placeholder="password" class="text-input">
-<input type="submit" value="szukaj" id="submit"> 
+<form method="post" id="form">
+<input type="text" placeholder="name" class="text-input" th:field="*{user.name}">
+<input type="text" placeholder="surname" class="text-input" th:field="*{user.surname}">
+<input type="text" placeholder="login" class="text-input" th:field="*{user.login}">
+<input type="password" placeholder="password" class="text-input" th:field="*{user.password}">
+<input type="password" placeholder="Repeat password" class="text-input" name="password2">
+<input type="submit" value="register" id="submit">
 
 </form>
-	
+	<!--id dla java script a co gdy chcemy też id dla cssa-->
   </div>
 </div>
 

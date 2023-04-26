@@ -19,12 +19,12 @@
 	</div>
   <div id="inside-container">
   
-<form id="form">
-<input type="text" placeholder="name" class="text-input">
-<input type="text" placeholder="brand" class="text-input">
-<input type="text" placeholder="price" class="text-input">
-<input type="text" placeholder="quantity" class="text-input">
-<input type="text" placeholder="state" class="text-input">
+<form method="post" id="form">
+<input type="text" placeholder="name" class="text-input" th:field="*{Item.name}">
+<input type="text" placeholder="brand" class="text-input" th:field="*{Item.brand}">
+<input type="text" placeholder="price" class="text-input" th:field="*{Item.price}">
+<input type="text" placeholder="quantity" class="text-input" th:field="*{Item.quantity}">
+<input type="text" placeholder="state" class="text-input" th:field="*{Item.state}">
 <input type="file" id="real-file" style="display:none;">
 <button type="button" id="custom-button">choose a file</button>
 <span id="custom-text">No file yet</span>

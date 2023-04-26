@@ -1,5 +1,6 @@
 package org.example.model;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,9 +13,14 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity(name="torder")
 public class Order implements Saveable {
-    int id;
-    int userId;
-    List<OrderPosition> orderPositon = new ArrayList<>();
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @ManyToOne(fetch = FetchType.EAGER)
+    private User user;//userId
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<OrderPosition> orderPositon = new ArrayList<>();
 
 }

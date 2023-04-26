@@ -1,5 +1,6 @@
 package org.example.model;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,8 +10,13 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity(name="torderposition")
 public class OrderPosition implements Saveable {
-    int id;
-    int itemId;
-    int quantity;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Item item;
+
+    private int quantity;
 }

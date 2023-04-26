@@ -1,53 +1,49 @@
 package org.example.database.hibernate;
 
-import org.example.Exceptions.UserLoginExistException;
+import jakarta.persistence.NoResultException;
 import org.example.database.IUserDAO;
 import org.example.model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-public class UserDAOImpl extends EntityManager implements IUserDAO {
+@Repository
+public class UserDAOImpl implements IUserDAO {
 
-    public UserDAOImpl(@Autowired SessionFactory sessionFactory){
-        super(sessionFactory);
-    }
+    @Autowired
+    SessionFactory sessionFactory;
+
     @Override
     public Optional<User> getUserById(int id) {
-      Session session=sessionFactory.openSession();
-        Query<User> query=session.createQuery("FROM org.example.model.User WHERE id=:id");
-        query.setParameter("id",id);
-        Optional<User> result=Optional.empty();
-        try {
-            result=Optional.of(query.getSingleResult());
-        }catch (Exception e){}
-        session.close();
-        return result;
+        return Optional.empty();
     }
 
     @Override
     public Optional<User> getUserByLogin(String login) {
-        Session session=sessionFactory.openSession();
-        Query<User> query=session.createQuery("From org.example.model.User WHERE login=:login");
-        query.setParameter("login",login);
-        Optional<User> result=Optional.empty();
+        Session session = this.sessionFactory.openSession();
+        Query<User> query = session.createQuery(
+                "FROM pl.camp.it.book.store.model.User WHERE login = :login",
+                User.class);
+        query.setParameter("login", login);
+        Optional<User> result = Optional.empty();
         try {
-            result=Optional.of(query.getSingleResult());
-        }catch (Exception e){}
+            result = Optional.of(query.getSingleResult());
+        } catch (NoResultException e){}
         session.close();
         return result;
     }
-    
+
     @Override
     public void persistUser(User user) {
-        try {
-            super.persist(user);
-        } catch (UserLoginExistException e) {
-            System.out.println("login już istnieje");
-            //TODO:
-        }
+        Session session = this.sessionFactory.openSession();
+        session.beginTransaction();
+        System.out.println(user);
+        session.persist(user);
+        session.getTransaction().commit();
+        session.close();
     }
 }
